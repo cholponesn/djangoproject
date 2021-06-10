@@ -1,0 +1,20 @@
+{{news.title}}
+{{news.descriptions}}
+{{news.photo}}
+{{news.datetime}}
+{{news.author}}
+{% for n in comments %}
+{{ n.user }}
+{{ n.text }}
+{{ n.datetime }}
+{% endfor %}
+
+
+<form method="POST" action="">
+    {% csrf_token %}
+{%if request.user.is_authenticated %}
+{{form}}
+    <input type="submit">
+
+{% endif %}
+</form>

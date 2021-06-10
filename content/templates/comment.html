@@ -1,0 +1,15 @@
+{% for n in comment %}
+{{n.news}}
+{{n.user}}
+{{n.text}}
+{{n.datetime}}
+{% endfor%}
+
+
+<form method="POST" action="">
+    {% csrf_token %}
+
+{{form}}
+
+<input type="submit">
+</form>
